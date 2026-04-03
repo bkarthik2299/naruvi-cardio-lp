@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Gordita', 'DM Sans', 'Inter', sans-serif;
+
+  --color-navy: #13467B;
+  --color-navy-dark: #0D3156;
+  --color-pink: #F280A6;
+  --color-pink-hover: #D96A8F;
+  --color-cream: #FFFFFF;
+  --color-tan: #FFFFFF;
+  --color-gold: #C9A97A;
+  --color-text-dark: #1E293B;
+  --color-text-muted: #64748B;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gorgeous Pink Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-pink);
+  border-radius: 5px;
+  border: 2px solid var(--color-cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-pink-hover);
+}
+
+/* Custom styles for text inputs and textarea */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  background: rgba(242, 128, 166, 0.03) !important;
+}
+
+/* Custom Thin Scrollbar for Dropdowns */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #F280A680;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-pink);
+}
